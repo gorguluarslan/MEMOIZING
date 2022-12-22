@@ -1,7 +1,13 @@
 import React from "react";
 
-function User() {
-  return <div>User</div>;
+function User({ data }) {
+  console.log("User component re-render");
+  return (
+    <div>
+      User
+      <pre>{JSON.stringify(data, null, 2)}</pre>
+    </div>
+  );
 }
 
 export default User;
